@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider } from "./contexts/AuthContext";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Cadastro from "./pages/cadastro/Cadastro";
@@ -12,11 +12,15 @@ import DeletarTema from "./components/temas/deletartema/DeletarTema";
 import ListaPostagens from "./components/postagens/listapostagens/ListaPostagens";
 import FormPostagem from "./components/postagens/formpostagem/FormPostagem";
 import DeletarPostagem from "./components/postagens/deletarpostagem/DeletaPostagem";
+import Perfil from "./pages/perfil/Perfil";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
       <AuthProvider>
+        <ToastContainer />
         <BrowserRouter>
           <Navbar />
 
@@ -37,6 +41,7 @@ function App() {
                 path="/deletarpostagem/:id"
                 element={<DeletarPostagem />}
               />
+              <Route path="/perfil" element={<Perfil />} />
             </Routes>
           </div>
 
