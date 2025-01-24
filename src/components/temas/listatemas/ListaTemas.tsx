@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { DNA } from "react-loader-spinner";
+import { ColorRing, DNA } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import Tema from "../../../models/Tema";
@@ -40,7 +40,7 @@ function ListaTemas() {
   return (
     <>
       {temas.length === 0 && (
-        <DNA
+        <ColorRing
           visible={true}
           height="200"
           width="200"
