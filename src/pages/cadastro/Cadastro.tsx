@@ -156,9 +156,7 @@ function Cadastro() {
             </button>
             <button
               type="submit"
-              className="rounded text-white bg-indigo-400 
-                           hover:bg-indigo-900 w-1/2 py-2
-                           flex justify-center"
+              className="rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2 flex justify-center"
             >
               {isLoading ? (
                 <RotatingLines
